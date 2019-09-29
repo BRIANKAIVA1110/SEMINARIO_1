@@ -1,5 +1,5 @@
-<?
-    $this->title = 'CLientes';
+<?php
+    $this->title = 'atrrr';
 ?>
 
 
