@@ -6,7 +6,7 @@ use Yii;
 use yii\web\Controller;
 
 
-class ArticulosController extends Controller
+class ModelosController extends Controller
 {
 
     public function actionIndex()
