@@ -4,7 +4,7 @@ namespace app\controllers;
 
 use Yii;
 use yii\web\Controller;
-// use yii\web\Response;
+use app\models\Cliente;
 
 class ClientesController extends Controller
 {
@@ -12,6 +12,12 @@ class ClientesController extends Controller
     public function actionIndex()
     {
         return $this->render('index');
+    }
+
+    public function actionAgregar()
+    {
+        $ClienteModel = new Cliente;
+        return $this->render('agregar',['model'=>$ClienteModel]);
     }
 
 }
