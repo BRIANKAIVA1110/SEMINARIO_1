@@ -8,23 +8,24 @@ use yii\base\Model;
 
 class Cliente extends Model
 {
-    public $nameAndLastName;
+    public $name;
+    public $lastName;
     public $email;
 
     public function rules()
     {
         return [
-            [['nameAndLastName', 'email'], 'required'],
-            ['email', 'email'],/*valida si el atributo email es email*/
-            // // verifyCode needs to be entered correctly
-            // ['verifyCode', 'captcha'],
+            [['name', 'lastName','email'], 'required'],
+            ['email', 'email']
         ];
     }
 
     public function attributeLabels()
     {
         return [
-            'nameAndLastName' => 'Name And LastName',
+            'name' => 'Name',
+            'lastName' => 'LastName',
+            'email' => 'E-Mail',
         ];
     }
 }

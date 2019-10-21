@@ -8,23 +8,22 @@ use yii\base\Model;
 
 class Stock extends Model
 {
-    public $nameAndLastName;
-    public $email;
+    public $stockId;
+    public $articuloId;
+    public $cantidad;
 
     public function rules()
     {
         return [
-            [['nameAndLastName', 'email'], 'required'],
-            ['email', 'email'],/*valida si el atributo email es email*/
-            // // verifyCode needs to be entered correctly
-            // ['verifyCode', 'captcha'],
+            [['articuloId', 'cantidad'], 'required'],
         ];
     }
 
     public function attributeLabels()
     {
         return [
-            'nameAndLastName' => 'Name And LastName',
+            'articuloId' => 'Articulo',
+            'cantidad' => 'Cantidad',
         ];
     }
 }

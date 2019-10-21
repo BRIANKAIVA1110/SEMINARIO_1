@@ -8,23 +8,22 @@ use yii\base\Model;
 
 class Modelo extends Model
 {
-    public $nameAndLastName;
-    public $email;
+    public $modeloId;
+    public $codigo;
+    public $descripcion;
 
     public function rules()
     {
         return [
-            [['nameAndLastName', 'email'], 'required'],
-            ['email', 'email'],/*valida si el atributo email es email*/
-            // // verifyCode needs to be entered correctly
-            // ['verifyCode', 'captcha'],
+            [['codigo', 'descripcion'], 'required'],
         ];
     }
 
     public function attributeLabels()
     {
         return [
-            'nameAndLastName' => 'Name And LastName',
+            'codigo' => 'Codigo',
+            'descripcion' => 'Descripcion',
         ];
     }
 }
